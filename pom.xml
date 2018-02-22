@@ -12,11 +12,11 @@
 		<revision>1.0.0-SNAPSHOT</revision>
 		<main.basedir>${basedir}</main.basedir>
 	</properties>
-	
+
 	<build>
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
 					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
@@ -27,14 +27,10 @@
 							<pluginExecutions>
 								<pluginExecution>
 									<pluginExecutionFilter>
-										<groupId>
-											org.jetbrains.kotlin
-										</groupId>
-										<artifactId>
-											kotlin-maven-plugin
-										</artifactId>
+										<groupId>org.codehaus.mojo</groupId>
+										<artifactId>flatten-maven-plugin</artifactId>
 										<versionRange>
-											[1.1.51,)
+											[0.1,)
 										</versionRange>
 										<goals>
 											<goal>compile</goal>
@@ -51,8 +47,8 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
-	</build>		
-			
+	</build>
+
 	<modules>
 		<module>wudaosoft-spring-boot-parent</module>
 		<module>wudaosoft-spring-boot-autoconfigure</module>

@@ -1,0 +1,5 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.wudaosoft.spring.boot.autoconfigure.weixinsdk.WudaoWeixinAutoConfiguration,\
+com.wudaosoft.spring.boot.autoconfigure.weixinsdk.WudaoWeixinControllerAutoConfiguration,\
+com.wudaosoft.spring.boot.autoconfigure.httpclient.WudaoHttpclientAutoConfiguration

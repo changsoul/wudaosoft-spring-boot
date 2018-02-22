@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.wudaosoft</groupId>
+		<artifactId>wudaosoft-spring-boot-build</artifactId>
+		<version>${revision}</version>
+	</parent>
+	<artifactId>wudaosoft-spring-boot-parent</artifactId>
+	<packaging>pom</packaging>
+	<name>Wudaosoft Spring Boot Parent</name>
+	<description>Wudaosoft Spring Boot Parent</description>
+	<url>http://www.wudaosoft.com</url>
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
+		</license>
+	</licenses>
+	<scm>
+		<url>https://github.com/changsoul/wudaosoft-spring-boot</url>
+		<connection>
+			scm:git:https://git@github.com/changsoul/wudaosoft-spring-boot.git
+		</connection>
+	</scm>
+	<organization>
+		<name>Wudao Software Studio</name>
+		<url>http://www.wudaosoft.com</url>
+	</organization>
+	<developers>
+		<developer>
+			<id>changsoul</id>
+			<name>changsoul</name>
+			<email>changsoul.wu@gmail.com</email>
+		</developer>
+	</developers>
+
+	<properties>
+		<main.basedir>${basedir}/..</main.basedir>
+		<!-- <disable.checks>false</disable.checks> -->
+		<java.version>1.6</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+
+		<junit.version>4.12</junit.version>
+		<logback.version>1.2.3</logback.version>
+		<servlet-api.version>3.1.0</servlet-api.version>
+		<slf4j.version>1.7.25</slf4j.version>
+		<spring-boot.version>1.5.10.RELEASE</spring-boot.version>
+		<wudaosoft-httpclient.version>2.0.2</wudaosoft-httpclient.version>
+		<wudaosoft-weixin-sdk.version>3.0.0</wudaosoft-weixin-sdk.version>
+
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-autoconfigure</artifactId>
+				<version>${spring-boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-configuration-processor</artifactId>
+				<version>${spring-boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>${servlet-api.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.wudaosoft</groupId>
+				<artifactId>wudaosoft-httpclient</artifactId>
+				<version>${wudaosoft-httpclient.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.wudaosoft</groupId>
+				<artifactId>wudaosoft-weixin-sdk</artifactId>
+				<version>${wudaosoft-weixin-sdk.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jcl-over-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jul-to-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>log4j-over-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-access</artifactId>
+				<version>${logback.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>${logback.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-core</artifactId>
+				<version>${logback.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jul-to-slf4j</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>log4j-over-slf4j</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-access</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<optional>true</optional>
+		</dependency>
+	</dependencies>
+
+
+	<build>
+		<plugins>
+			<!-- <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>flatten-maven-plugin</artifactId> 
+				<inherited>false</inherited> <executions> <execution> Create an effective 
+				POM (with versions expanded) for the CLI and documentation <id>flatten-effective-pom</id> 
+				<phase>process-resources</phase> <goals> <goal>flatten</goal> </goals> <configuration> 
+				<updatePomFile>false</updatePomFile> <outputDirectory>${project.build.directory}/effective-pom</outputDirectory> 
+				<flattenedPomFilename>spring-boot-dependencies.xml</flattenedPomFilename> 
+				<flattenMode>oss</flattenMode> <pomElements> <dependencyManagement>expand</dependencyManagement> 
+				<pluginManagement>expand</pluginManagement> <properties>remove</properties> 
+				<repositories>remove</repositories> </pomElements> </configuration> </execution> 
+				<execution> Flatten and simplify our own POM for install/deploy <id>flatten</id> 
+				<phase>process-resources</phase> <goals> <goal>flatten</goal> </goals> <configuration> 
+				<updatePomFile>true</updatePomFile> <flattenMode>bom</flattenMode> <pomElements> 
+				<pluginManagement>keep</pluginManagement> </pomElements> </configuration> 
+				</execution> <execution> <id>flatten-clean</id> <phase>clean</phase> <goals> 
+				<goal>clean</goal> </goals> </execution> </executions> </plugin> <plugin> 
+				<groupId>org.codehaus.mojo</groupId> <artifactId>xml-maven-plugin</artifactId> 
+				<inherited>false</inherited> <executions> <execution> Cleanup the effective 
+				POM <id>post-process-effective-pom</id> <phase>process-resources</phase> 
+				<goals> <goal>transform</goal> </goals> <configuration> <transformationSets> 
+				<transformationSet> <dir>${project.build.directory}/effective-pom</dir> <outputDir>${project.build.directory}/effective-pom</outputDir> 
+				<stylesheet>src/main/xslt/post-process-flattened-pom.xsl</stylesheet> <outputProperties> 
+				<outputProperty> <name>indent</name> <value>yes</value> </outputProperty> 
+				</outputProperties> </transformationSet> </transformationSets> </configuration> 
+				</execution> <execution> Cleanup the flattened project POM <id>post-process-flattened-pom</id> 
+				<phase>process-resources</phase> <goals> <goal>transform</goal> </goals> 
+				<configuration> <transformationSets> <transformationSet> <dir>${project.basedir}</dir> 
+				<outputDir>${project.basedir}</outputDir> <includes>.flattened-pom.xml</includes> 
+				<stylesheet>src/main/xslt/post-process-flattened-pom.xsl</stylesheet> <outputProperties> 
+				<outputProperty> <name>indent</name> <value>yes</value> </outputProperty> 
+				</outputProperties> </transformationSet> </transformationSets> </configuration> 
+				</execution> </executions> </plugin> <plugin> <groupId>org.codehaus.mojo</groupId> 
+				<artifactId>build-helper-maven-plugin</artifactId> <inherited>false</inherited> 
+				<executions> <execution> Attach effective POM <id>attach-artifacts</id> <phase>package</phase> 
+				<goals> <goal>attach-artifact</goal> </goals> <configuration> <artifacts> 
+				<artifact> <file>${project.build.directory}/effective-pom/spring-boot-dependencies.xml</file> 
+				<type>effective-pom</type> </artifact> </artifacts> </configuration> </execution> 
+				</executions> </plugin> -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>flatten-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<!-- <inherited>true</inherited> -->
+				<executions>
+					<execution>
+						<!-- Tidy up all POMs before they are published -->
+						<id>flatten</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>flatten</goal>
+						</goals>
+						<configuration>
+							<updatePomFile>true</updatePomFile>
+							<flattenMode>oss</flattenMode>
+							<pomElements>
+								<parent>expand</parent>
+								<distributionManagement>remove</distributionManagement>
+								<repositories>remove</repositories>
+							</pomElements>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.codehaus.plexus</groupId>
+						<artifactId>plexus-compiler-javac</artifactId>
+						<version>2.7</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<attach>true</attach>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-javadoc</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<configuration>
+							<additionalparam>-Xdoclint:none</additionalparam>
+						</configuration>
+					</execution>
+				</executions>
+				<configuration>
+					<show>public</show>
+					<charset>UTF-8</charset>
+					<encoding>UTF-8</encoding>
+					<docencoding>UTF-8</docencoding>
+					<locale>en_US</locale>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+		</repository>
+	</distributionManagement>
+</project>

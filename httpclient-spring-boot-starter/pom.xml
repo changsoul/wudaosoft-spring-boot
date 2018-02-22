@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.wudaosoft</groupId>
+		<artifactId>wudaosoft-spring-boot-parent</artifactId>
+		<version>${revision}</version>
+		<relativePath>../wudaosoft-spring-boot-parent</relativePath>
+	</parent>
+	<artifactId>httpclient-spring-boot-starter</artifactId>
+	<name>Wudaosoft Httpclient SpringBoot Starter</name>
+	<description>Wudaosoft Httpclient SpringBoot Starter</description>
+	<url>http://www.wudaosoft.com</url>
+	<dependencies>
+		<dependency>
+			<groupId>com.wudaosoft</groupId>
+			<artifactId>wudaosoft-httpclient</artifactId>
+		</dependency>
+	</dependencies>
+</project>
