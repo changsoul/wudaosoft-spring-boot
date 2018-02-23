@@ -9,6 +9,7 @@ logs/
 .svn/
 .DS_Store
 *.iml
+.flattened-pom.xml
 
 *.class
 
