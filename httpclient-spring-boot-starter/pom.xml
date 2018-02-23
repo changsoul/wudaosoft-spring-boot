@@ -16,5 +16,10 @@
 			<groupId>com.wudaosoft</groupId>
 			<artifactId>wudaosoft-httpclient</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.wudaosoft</groupId>
+			<artifactId>wudaosoft-spring-boot-autoconfigure</artifactId>
+			<version>${revision}</version>
+		</dependency>
 	</dependencies>
 </project>

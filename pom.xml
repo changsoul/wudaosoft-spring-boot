@@ -10,7 +10,7 @@
 	<url>http://www.wudaosoft.com</url>
 	<properties>
 		<revision>1.0.0-SNAPSHOT</revision>
-		<main.basedir>${basedir}</main.basedir>
+		<!-- <main.basedir>${basedir}</main.basedir> -->
 	</properties>
 
 	<build>
@@ -30,15 +30,14 @@
 										<groupId>org.codehaus.mojo</groupId>
 										<artifactId>flatten-maven-plugin</artifactId>
 										<versionRange>
-											[0.1,)
+											[1.0,)
 										</versionRange>
 										<goals>
-											<goal>compile</goal>
-											<goal>test-compile</goal>
+											<goal>flatten</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore />
 									</action>
 								</pluginExecution>
 							</pluginExecutions>
