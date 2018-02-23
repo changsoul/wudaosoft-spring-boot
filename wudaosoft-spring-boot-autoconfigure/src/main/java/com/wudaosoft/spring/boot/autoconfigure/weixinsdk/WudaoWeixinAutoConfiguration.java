@@ -45,9 +45,9 @@ import com.wudaosoft.weixinsdk.usermanage.UserGroupApi;
  */
 
 @Configuration
-@EnableConfigurationProperties(WudaoWeixinProperties.class)
-@ConditionalOnClass({WeiXinConfig.class})
+@ConditionalOnClass(name = "com.wudaosoft.weixinsdk.config.WeiXinConfig")
 @ConditionalOnProperty(prefix = "wudaosoft.weixin", value = "enabled", matchIfMissing = true)
+@EnableConfigurationProperties(WudaoWeixinProperties.class)
 @PropertySource("classpath:/com/wudaosoft/spring/boot/autoconfigure/weixinsdk/httpclient.properties")
 public class WudaoWeixinAutoConfiguration {
 	

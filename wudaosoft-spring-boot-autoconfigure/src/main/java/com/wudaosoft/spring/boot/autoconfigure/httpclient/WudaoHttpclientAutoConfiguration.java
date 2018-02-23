@@ -35,14 +35,14 @@ import com.wudaosoft.net.httpclient.Request;
  */
 
 @Configuration
-@EnableConfigurationProperties(WudaoHttpclientProperties.class)
-@ConditionalOnClass(Request.class)
+@ConditionalOnClass(name = "com.wudaosoft.net.httpclient.Request")
 @ConditionalOnProperty(prefix = "wudaosoft.httpclient", value = "enabled", matchIfMissing = true)
+@EnableConfigurationProperties(WudaoHttpclientProperties.class)
 public class WudaoHttpclientAutoConfiguration {
 
 	@Bean
 	@Primary
-	@ConditionalOnProperty(prefix = "wudaosoft.httpclient", value = "host-url", matchIfMissing = false)
+	@ConditionalOnProperty(prefix = "wudaosoft.httpclient", value = "target-host", matchIfMissing = false)
 	public Request defaultRequest(WudaoHttpclientProperties properties) {
 
 		HostConfig config = HostConfigBuilder.create(properties.getTargetHost())

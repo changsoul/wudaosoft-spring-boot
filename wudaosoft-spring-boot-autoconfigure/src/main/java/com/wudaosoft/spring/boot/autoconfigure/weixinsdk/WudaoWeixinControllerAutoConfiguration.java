@@ -15,8 +15,6 @@
  */
 package com.wudaosoft.spring.boot.autoconfigure.weixinsdk;
 
-import javax.servlet.Servlet;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
@@ -43,10 +41,10 @@ import com.wudaosoft.weixinsdk.servlet.WeiXinMessageServlet;
  *
  */
 @Configuration
-@AutoConfigureAfter(WudaoWeixinAutoConfiguration.class)
-@ConditionalOnClass({WeiXinConfig.class, Servlet.class})
-@ConditionalOnProperty(prefix = "wudaosoft.weixin", value = "enabled", matchIfMissing = true)
 @ConditionalOnWebApplication
+@ConditionalOnClass(name = {"com.wudaosoft.weixinsdk.config.WeiXinConfig", "javax.servlet.Servlet"})
+@ConditionalOnProperty(prefix = "wudaosoft.weixin", value = "enabled", matchIfMissing = true)
+@AutoConfigureAfter(WudaoWeixinAutoConfiguration.class)
 public class WudaoWeixinControllerAutoConfiguration {
 
 	private static final Logger log = LoggerFactory.getLogger(WudaoWeixinControllerAutoConfiguration.class);

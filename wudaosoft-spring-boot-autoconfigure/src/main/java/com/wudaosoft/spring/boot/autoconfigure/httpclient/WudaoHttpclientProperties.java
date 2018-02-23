@@ -72,8 +72,8 @@ public class WudaoHttpclientProperties {
 	/**
 	 * @param targetHost the targetHost to set
 	 */
-	public void setTargetHost(String hostUrl) {
-		this.targetHost = hostUrl;
+	public void setTargetHost(String targetHost) {
+		this.targetHost = targetHost;
 	}
 
 	/**
