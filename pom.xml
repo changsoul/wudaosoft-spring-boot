@@ -9,8 +9,7 @@
 	<description>Wudaosoft Spring Boot Build</description>
 	<url>http://www.wudaosoft.com</url>
 	<properties>
-		<revision>1.0.0-SNAPSHOT</revision>
-		<!-- <main.basedir>${basedir}</main.basedir> -->
+		<revision>1.0.0</revision>
 	</properties>
 
 	<build>

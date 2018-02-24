@@ -35,7 +35,7 @@ import com.wudaosoft.net.httpclient.Request;
  */
 
 @Configuration
-@ConditionalOnClass(name = "com.wudaosoft.net.httpclient.Request")
+@ConditionalOnClass(Request.class)
 @ConditionalOnProperty(prefix = "wudaosoft.httpclient", value = "enabled", matchIfMissing = true)
 @EnableConfigurationProperties(WudaoHttpclientProperties.class)
 public class WudaoHttpclientAutoConfiguration {
