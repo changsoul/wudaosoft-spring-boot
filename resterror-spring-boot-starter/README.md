@@ -1,32 +1,32 @@
-# httpclient-spring-boot-starter
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.wudaosoft/httpclient-spring-boot-starter/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.wudaosoft/httpclient-spring-boot-starter/)
+# resterror-spring-boot-starter
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.wudaosoft/resterror-spring-boot-starter/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.wudaosoft/resterror-spring-boot-starter/)
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
-Wudaosoft Httpclient SpringBoot Starter.
+Wudaosoft REST Error SpringBoot Starter.
 
 ## Download
 
-- http://repo1.maven.org/maven2/com/wudaosoft/httpclient-spring-boot-starter/  
+- http://repo1.maven.org/maven2/com/wudaosoft/resterror-spring-boot-starter/  
 - [the latest JAR][1]  
-[1]: https://search.maven.org/remote_content?g=com.wudaosoft&a=httpclient-spring-boot-starter&v=LATEST
+[1]: https://search.maven.org/remote_content?g=com.wudaosoft&a=resterror-spring-boot-starter&v=LATEST
 
 ## Maven
 
 ```xml
 <dependency>
     <groupId>com.wudaosoft</groupId>
-    <artifactId>httpclient-spring-boot-starter</artifactId>
+    <artifactId>resterror-spring-boot-starter</artifactId>
     <version>1.0.2</version>
 </dependency>
 ```
 ## Gradle via JCenter
 
 ``` groovy
-compile 'com.wudaosoft:httpclient-spring-boot-starter:1.0.2'
+compile 'com.wudaosoft:resterror-spring-boot-starter:1.0.2'
 ```
 ### *License*
 
-httpclient-spring-boot-starter is released under the [Apache 2.0 license](../LICENSE).
+resterror-spring-boot-starter is released under the [Apache 2.0 license](../LICENSE).
 
 ```
 Copyright 2009-2018 Wudao Software Studio

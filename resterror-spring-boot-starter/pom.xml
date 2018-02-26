@@ -9,17 +9,12 @@
 		<version>${revision}</version>
 		<relativePath>../wudaosoft-spring-boot-parent</relativePath>
 	</parent>
-	<artifactId>weixinsdk-spring-boot-starter</artifactId>
+	<artifactId>resterror-spring-boot-starter</artifactId>
 	<packaging>jar</packaging>
-	<name>Wudaosoft Weixin SDK SpringBoot Starter</name>
-	<description>Wudaosoft Weixin SDK SpringBoot Starter</description>
+	<name>Wudaosoft REST Error SpringBoot Starter</name>
+	<description>Wudaosoft REST Error SpringBoot Starter</description>
 	<url>http://www.wudaosoft.com</url>
 	<dependencies>
-		<dependency>
-			<groupId>com.wudaosoft</groupId>
-			<artifactId>httpclient-spring-boot-starter</artifactId>
-			<version>${revision}</version>
-		</dependency>
 		<dependency>
 			<groupId>com.wudaosoft</groupId>
 			<artifactId>wudaosoft-spring-boot-autoconfigure</artifactId>
@@ -27,13 +22,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.wudaosoft</groupId>
-			<artifactId>wudaosoft-weixin-sdk</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>com.wudaosoft</groupId>
-					<artifactId>wudaosoft-httpclient</artifactId>
-				</exclusion>
-			</exclusions>
+			<artifactId>wudaosoft-commons</artifactId>
 		</dependency>
 	</dependencies>
 </project>

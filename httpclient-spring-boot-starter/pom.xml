@@ -8,6 +8,7 @@
 		<relativePath>../wudaosoft-spring-boot-parent</relativePath>
 	</parent>
 	<artifactId>httpclient-spring-boot-starter</artifactId>
+	<packaging>jar</packaging>
 	<name>Wudaosoft Httpclient SpringBoot Starter</name>
 	<description>Wudaosoft Httpclient SpringBoot Starter</description>
 	<url>http://www.wudaosoft.com</url>

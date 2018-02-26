@@ -16,13 +16,13 @@ Wudaosoft Httpclient SpringBoot Starter.
 <dependency>
     <groupId>com.wudaosoft</groupId>
     <artifactId>wudaosoft-spring-boot-autoconfigure</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 </dependency>
 ```
 ## Gradle via JCenter
 
 ``` groovy
-compile 'com.wudaosoft:wudaosoft-spring-boot-autoconfigure:1.0.1'
+compile 'com.wudaosoft:wudaosoft-spring-boot-autoconfigure:1.0.2'
 ```
 ### *License*
 
