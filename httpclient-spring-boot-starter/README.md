@@ -16,13 +16,13 @@ Wudaosoft Httpclient SpringBoot Starter.
 <dependency>
     <groupId>com.wudaosoft</groupId>
     <artifactId>httpclient-spring-boot-starter</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 ## Gradle via JCenter
 
 ``` groovy
-compile 'com.wudaosoft:httpclient-spring-boot-starter:1.0.0'
+compile 'com.wudaosoft:httpclient-spring-boot-starter:1.0.1'
 ```
 ### *License*
 

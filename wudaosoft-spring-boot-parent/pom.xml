@@ -41,14 +41,38 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
+		<!-- Dependency versions -->
 		<junit.version>4.12</junit.version>
 		<logback.version>1.2.3</logback.version>
 		<servlet-api.version>3.1.0</servlet-api.version>
 		<slf4j.version>1.7.25</slf4j.version>
 		<spring-boot.version>1.5.10.RELEASE</spring-boot.version>
-		<wudaosoft-httpclient.version>2.0.2</wudaosoft-httpclient.version>
-		<wudaosoft-weixin-sdk.version>3.0.0</wudaosoft-weixin-sdk.version>
+		<wudaosoft-httpclient.version>2.0.3</wudaosoft-httpclient.version>
+		<wudaosoft-weixin-sdk.version>3.0.1</wudaosoft-weixin-sdk.version>
 
+		<!-- Plugin versions -->
+		<maven-antrun-plugin.version>1.8</maven-antrun-plugin.version>
+		<maven-assembly-plugin.version>3.1.0</maven-assembly-plugin.version>
+		<maven-clean-plugin.version>3.0.0</maven-clean-plugin.version>
+		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+		<maven-dependency-plugin.version>3.0.1</maven-dependency-plugin.version>
+		<maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
+		<maven-eclipse-plugin.version>2.10</maven-eclipse-plugin.version>
+		<maven-enforcer-plugin.version>3.0.0-M1</maven-enforcer-plugin.version>
+		<maven-failsafe-plugin.version>2.20.1</maven-failsafe-plugin.version>
+		<maven-install-plugin.version>2.5.2</maven-install-plugin.version>
+		<maven-invoker-plugin.version>3.0.0</maven-invoker-plugin.version>
+		<maven-help-plugin.version>2.2</maven-help-plugin.version>
+		<maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
+		<maven-javadoc-plugin.version>3.0.0-M1</maven-javadoc-plugin.version>
+		<maven-resources-plugin.version>3.0.1</maven-resources-plugin.version>
+		<maven-shade-plugin.version>2.4.3</maven-shade-plugin.version>
+		<maven-site-plugin.version>3.6</maven-site-plugin.version>
+		<maven-source-plugin.version>3.0.1</maven-source-plugin.version>
+		<maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>
+		<maven-war-plugin.version>3.1.0</maven-war-plugin.version>
+		<maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
+		<flatten-maven-plugin.version>1.0.0</flatten-maven-plugin.version>
 	</properties>
 
 	<dependencyManagement>
@@ -111,11 +135,6 @@
 			</dependency>
 			<dependency>
 				<groupId>ch.qos.logback</groupId>
-				<artifactId>logback-access</artifactId>
-				<version>${logback.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>ch.qos.logback</groupId>
 				<artifactId>logback-classic</artifactId>
 				<version>${logback.version}</version>
 			</dependency>
@@ -155,11 +174,6 @@
 		</dependency>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-access</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
 			<optional>true</optional>
 		</dependency>
@@ -170,54 +184,132 @@
 		</dependency>
 	</dependencies>
 
-
 	<build>
 		<!-- <resources> <resource> <directory>${project.basedir}/</directory> 
 			<targetPath>${project.basedir}/</targetPath> <filtering>true</filtering> 
 			<includes> <include>README.md</include> </includes> </resource> </resources> -->
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<version>${maven-antrun-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>${maven-assembly-plugin.version}</version>
+					<configuration>
+						<recompressZippedFiles>false</recompressZippedFiles>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>${maven-clean-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven-compiler-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>${maven-deploy-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>${maven-dependency-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-eclipse-plugin</artifactId>
+					<version>${maven-eclipse-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-enforcer-plugin</artifactId>
+					<version>${maven-enforcer-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-failsafe-plugin</artifactId>
+					<version>${maven-failsafe-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>${maven-install-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-invoker-plugin</artifactId>
+					<version>${maven-invoker-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-help-plugin</artifactId>
+					<version>${maven-help-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>${maven-jar-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>${maven-javadoc-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>${maven-resources-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-shade-plugin</artifactId>
+					<version>${maven-shade-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>${maven-site-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>${maven-source-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>${maven-surefire-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>${maven-war-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-gpg-plugin</artifactId>
+					<version>${maven-gpg-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>flatten-maven-plugin</artifactId>
+					<version>${flatten-maven-plugin.version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 		<plugins>
-			<!-- <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>flatten-maven-plugin</artifactId> 
-				<inherited>false</inherited> <executions> <execution> Create an effective 
-				POM (with versions expanded) for the CLI and documentation <id>flatten-effective-pom</id> 
-				<phase>process-resources</phase> <goals> <goal>flatten</goal> </goals> <configuration> 
-				<updatePomFile>false</updatePomFile> <outputDirectory>${project.build.directory}/effective-pom</outputDirectory> 
-				<flattenedPomFilename>spring-boot-dependencies.xml</flattenedPomFilename> 
-				<flattenMode>oss</flattenMode> <pomElements> <dependencyManagement>expand</dependencyManagement> 
-				<pluginManagement>expand</pluginManagement> <properties>remove</properties> 
-				<repositories>remove</repositories> </pomElements> </configuration> </execution> 
-				<execution> Flatten and simplify our own POM for install/deploy <id>flatten</id> 
-				<phase>process-resources</phase> <goals> <goal>flatten</goal> </goals> <configuration> 
-				<updatePomFile>true</updatePomFile> <flattenMode>bom</flattenMode> <pomElements> 
-				<pluginManagement>keep</pluginManagement> </pomElements> </configuration> 
-				</execution> <execution> <id>flatten-clean</id> <phase>clean</phase> <goals> 
-				<goal>clean</goal> </goals> </execution> </executions> </plugin> <plugin> 
-				<groupId>org.codehaus.mojo</groupId> <artifactId>xml-maven-plugin</artifactId> 
-				<inherited>false</inherited> <executions> <execution> Cleanup the effective 
-				POM <id>post-process-effective-pom</id> <phase>process-resources</phase> 
-				<goals> <goal>transform</goal> </goals> <configuration> <transformationSets> 
-				<transformationSet> <dir>${project.build.directory}/effective-pom</dir> <outputDir>${project.build.directory}/effective-pom</outputDir> 
-				<stylesheet>src/main/xslt/post-process-flattened-pom.xsl</stylesheet> <outputProperties> 
-				<outputProperty> <name>indent</name> <value>yes</value> </outputProperty> 
-				</outputProperties> </transformationSet> </transformationSets> </configuration> 
-				</execution> <execution> Cleanup the flattened project POM <id>post-process-flattened-pom</id> 
-				<phase>process-resources</phase> <goals> <goal>transform</goal> </goals> 
-				<configuration> <transformationSets> <transformationSet> <dir>${project.basedir}</dir> 
-				<outputDir>${project.basedir}</outputDir> <includes>.flattened-pom.xml</includes> 
-				<stylesheet>src/main/xslt/post-process-flattened-pom.xsl</stylesheet> <outputProperties> 
-				<outputProperty> <name>indent</name> <value>yes</value> </outputProperty> 
-				</outputProperties> </transformationSet> </transformationSets> </configuration> 
-				</execution> </executions> </plugin> <plugin> <groupId>org.codehaus.mojo</groupId> 
-				<artifactId>build-helper-maven-plugin</artifactId> <inherited>false</inherited> 
-				<executions> <execution> Attach effective POM <id>attach-artifacts</id> <phase>package</phase> 
-				<goals> <goal>attach-artifact</goal> </goals> <configuration> <artifacts> 
-				<artifact> <file>${project.build.directory}/effective-pom/spring-boot-dependencies.xml</file> 
-				<type>effective-pom</type> </artifact> </artifacts> </configuration> </execution> 
-				</executions> </plugin> -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>flatten-maven-plugin</artifactId>
-				<version>1.0.0</version>
-				<!-- <inherited>true</inherited> -->
 				<executions>
 					<execution>
 						<!-- Tidy up all POMs before they are published -->
@@ -227,7 +319,7 @@
 							<goal>flatten</goal>
 						</goals>
 						<configuration>
-							<updatePomFile>true</updatePomFile>
+							<updatePomFile>false</updatePomFile>
 							<flattenMode>oss</flattenMode>
 							<pomElements>
 								<parent>remove</parent>
@@ -241,7 +333,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.5.1</version>
 				<configuration>
 					<encoding>UTF-8</encoding>
 					<source>${java.version}</source>
@@ -278,6 +369,7 @@
 				</configuration>
 			</plugin>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<executions>
 					<execution>
@@ -299,6 +391,7 @@
 				</configuration>
 			</plugin>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-gpg-plugin</artifactId>
 				<executions>
 					<execution>

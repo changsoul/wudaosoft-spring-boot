@@ -40,7 +40,9 @@ public class WudaoHttpclientProperties {
 
 	private int socketTimeout = 10000;
 
-	private int poolSize = 70;
+	private int poolSize = 170;
+	
+	private int hostCount;
 
 	private boolean multiclient = false;
 
@@ -172,6 +174,20 @@ public class WudaoHttpclientProperties {
 	 */
 	public void setPoolSize(int poolSize) {
 		this.poolSize = poolSize;
+	}
+
+	/**
+	 * @return the hostCount
+	 */
+	public int getHostCount() {
+		return hostCount;
+	}
+
+	/**
+	 * @param hostCount the hostCount to set
+	 */
+	public void setHostCount(int hostCount) {
+		this.hostCount = hostCount;
 	}
 
 	/**

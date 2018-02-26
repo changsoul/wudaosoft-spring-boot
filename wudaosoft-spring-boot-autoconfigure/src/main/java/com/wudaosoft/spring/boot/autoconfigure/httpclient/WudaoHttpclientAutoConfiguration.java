@@ -51,7 +51,9 @@ public class WudaoHttpclientAutoConfiguration {
 				.setConnectionRequestTimeout(properties.getConnectionRequestTimeout())
 				.setConnectTimeout(properties.getConnectTimeout())
 				.setSocketTimeout(properties.getSocketTimeout())
-				.setPoolSize(properties.getPoolSize()).build();
+				.setPoolSize(properties.getPoolSize())
+				.setHostCount(properties.getHostCount())
+				.build();
 		
 		Request.Builder builder = Request.custom().setHostConfig(config);
 		
