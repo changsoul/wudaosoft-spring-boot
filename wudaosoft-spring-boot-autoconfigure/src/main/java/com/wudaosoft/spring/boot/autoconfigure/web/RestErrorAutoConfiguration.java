@@ -15,10 +15,13 @@
  */
 package com.wudaosoft.spring.boot.autoconfigure.web;
 
+import javax.servlet.Servlet;
+
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnResource;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.boot.autoconfigure.web.BasicErrorController;
 import org.springframework.boot.autoconfigure.web.ErrorAttributes;
@@ -26,6 +29,7 @@ import org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration;
 import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.DispatcherServlet;
 
 import com.wudaosoft.commons.mvc.rest.RestExceptionControllerAdvice;
 
@@ -34,8 +38,9 @@ import com.wudaosoft.commons.mvc.rest.RestExceptionControllerAdvice;
  *
  */
 @Configuration
-@ConditionalOnClass(RestExceptionControllerAdvice.class)
+@ConditionalOnClass({RestExceptionControllerAdvice.class, Servlet.class, DispatcherServlet.class })
 @ConditionalOnWebApplication
+@ConditionalOnResource(resources="classpath:/com/wudaosoft/spring/boot/starter/resterror/resterror.enabled")
 @ConditionalOnProperty(prefix="wudaosoft.web", name="rest-error", matchIfMissing=true)
 @AutoConfigureBefore(ErrorMvcAutoConfiguration.class)
 public class RestErrorAutoConfiguration {
