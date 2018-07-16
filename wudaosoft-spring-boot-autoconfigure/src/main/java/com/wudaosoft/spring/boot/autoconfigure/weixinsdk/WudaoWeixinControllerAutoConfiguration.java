@@ -82,8 +82,8 @@ public class WudaoWeixinControllerAutoConfiguration {
 	@Bean
 	@ConditionalOnBean(WeiXinMessageProcess.class)
 	@ConditionalOnMissingBean(MessageController.class)
-	public ServletRegistrationBean weiXinMessageServletRegistration(WeiXinMessageProcess officialWeiXinMessageProcess,
+	public ServletRegistrationBean<WeiXinMessageServlet> weiXinMessageServletRegistration(WeiXinMessageProcess officialWeiXinMessageProcess,
 			WudaoWeixinProperties properties) {
-		return new ServletRegistrationBean(new WeiXinMessageServlet(officialWeiXinMessageProcess), properties.getMessagePath());
+		return new ServletRegistrationBean<WeiXinMessageServlet>(new WeiXinMessageServlet(officialWeiXinMessageProcess), properties.getMessagePath());
 	}
 }
