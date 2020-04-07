@@ -10,7 +10,7 @@
 	<description>Wudaosoft Spring Boot Build</description>
 	<url>http://www.wudaosoft.com</url>
 	<properties>
-		<revision>1.0.6</revision>
+		<revision>2.0.0</revision>
 	</properties>
 
 	<build>

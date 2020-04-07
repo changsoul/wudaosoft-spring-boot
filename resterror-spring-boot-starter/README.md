@@ -16,13 +16,13 @@ Wudaosoft REST Error SpringBoot Starter.
 <dependency>
     <groupId>com.wudaosoft</groupId>
     <artifactId>resterror-spring-boot-starter</artifactId>
-    <version>1.0.5</version>
+    <version>2.0.0</version>
 </dependency>
 ```
 ## Gradle via JCenter
 
 ``` groovy
-compile 'com.wudaosoft:resterror-spring-boot-starter:1.0.5'
+compile 'com.wudaosoft:resterror-spring-boot-starter:2.0.0'
 ```
 ### *License*
 
